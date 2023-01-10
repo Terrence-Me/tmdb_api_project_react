@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon, Input } from 'semantic-ui-react';
 
 const SearchBar = () => {
   return (
@@ -6,7 +7,10 @@ const SearchBar = () => {
       <form action="" className="ui form">
         <div className="field">
           <label htmlFor="input">Search Movies</label>
-          <input type="text" id="input" />
+          <Input
+            icon={<Icon name="search" inverted circular link />}
+            placeholder="Search..."
+          />
         </div>
       </form>
     </div>
