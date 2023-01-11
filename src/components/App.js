@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import SearchBar from './SearchBar';
 import MovieList from './MovieList';
+import Header from './Header';
 
 import tmdb from '../apis/tmdb';
 
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
     <div className="ui container">
+      <Header />
       <SearchBar onSearchSubmit={onSearchSubmit} />
       <MovieList movies={movies} />
     </div>

@@ -1,6 +1,27 @@
 body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
 }
+header {
+  background-color: rgb(3, 37, 65);
+}
+
+.header-content {
+  margin-left: 20px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+.header-content > h3 {
+  margin: 0 20px;
+}
+
+header img {
+  display: block;
+  max-width: 154px;
+  min-height: 65px;
+  object-fit: contain;
+}
 
 #card-flex {
   flex-direction: row;
