@@ -7,7 +7,7 @@ const MovieList = ({ movies }) => {
     return <MovieItem key={movie.id} movie={movie} />;
   });
 
-  return <div>{renderedMovieList}</div>;
+  return <div className="ui">{renderedMovieList}</div>;
 };
 
 export default MovieList;
