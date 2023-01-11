@@ -1,21 +1,21 @@
 import React from 'react';
-import { Progress } from 'semantic-ui-react';
+import { Progress, Segment } from 'semantic-ui-react';
 
 const PercentBar = ({ rating }) => {
   let averageRating = rating * 10;
 
   return (
     <div>
-      <div inverted>
+      <Segment inverted id="inverted">
         <Progress
-          //   size="small"
+          size="small"
           id="pregress-container"
           percent={averageRating}
           inverted
           color="green"
           progress
         />
-      </div>
+      </Segment>
     </div>
   );
 };
