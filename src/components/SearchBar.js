@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Icon, Input } from 'semantic-ui-react';
+import { Input } from 'semantic-ui-react';
 
 const SearchBar = ({ onSearchSubmit }) => {
   const [searchedMovie, setSearchedMovie] = useState('');
@@ -20,7 +20,7 @@ const SearchBar = ({ onSearchSubmit }) => {
         <div className="field">
           <label htmlFor="input">Search Movies</label>
           <Input
-            icon={<Icon name="search" inverted circular link />}
+            action={{ icon: 'search' }}
             placeholder="Search..."
             value={searchedMovie}
             onChange={onInputChange}
