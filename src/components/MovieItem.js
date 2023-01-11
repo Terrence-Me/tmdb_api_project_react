@@ -1,5 +1,6 @@
 import React from 'react';
-// import classes from './MovieItem.module.css';
+
+import PercentBar from './PercentBar';
 
 import '../styles/styles.css';
 
@@ -15,7 +16,7 @@ const MovieItem = ({ movie }) => {
             <img src={posterUrl + movie.poster_path} alt={movie.title} />
           </a>
         </div>
-        <div className="content">
+        <div className="content" id="content-container">
           <div className="content-display">
             <a href={searchMovieBaseUrl + movie.id}>
               <div className="header">
@@ -27,6 +28,7 @@ const MovieItem = ({ movie }) => {
           <div className="description" id="description-text">
             <p>{movie.overview}</p>
           </div>
+          <PercentBar rating={movie.vote_average} />
         </div>
       </div>
     </div>
