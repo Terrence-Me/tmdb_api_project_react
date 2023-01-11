@@ -16,6 +16,7 @@ const App = () => {
     });
 
     setMovies(response.data.results);
+    console.log(response.data.results);
   };
 
   return (
