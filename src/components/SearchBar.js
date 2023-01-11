@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { Icon, Input } from 'semantic-ui-react';
 
-const SearchBar = () => {
+const SearchBar = ({ onSearchSubmit }) => {
   const [searchedMovie, setSearchedMovie] = useState('');
 
   const onInputChange = (event) => {
-    console.log(event.target.value);
     setSearchedMovie(event.target.value);
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(searchedMovie);
 
-    // onFormSubmit(searchedMovie);
+    onSearchSubmit(searchedMovie);
   };
 
   return (

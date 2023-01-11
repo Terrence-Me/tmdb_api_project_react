@@ -13,14 +13,11 @@ export const getPopularMovies = () => {
   });
 };
 
-export const getSearchMovie = () => {
-  axios.create({
-    baseURL: 'https://api.themoviedb.org/3/search/movie',
-    params: {
-      api_key: KEY,
-      language: 'en-US',
-      page: 1,
-      include_adult: false,
-    },
-  });
-};
+export default axios.create({
+  baseURL: 'https://api.themoviedb.org/3',
+  params: {
+    api_key: KEY,
+    language: 'en-US',
+    page: 1,
+  },
+});
