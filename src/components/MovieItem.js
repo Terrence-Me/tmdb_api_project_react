@@ -9,7 +9,7 @@ const searchMovieBaseUrl = 'https://www.themoviedb.org/movie/';
 const MovieItem = ({ movie }) => {
   return (
     <div className="ui link cards">
-      <div className="card">
+      <div className="card" id="card-flex">
         <div className="image">
           <a href={searchMovieBaseUrl + movie.id}>
             <img src={posterUrl + movie.poster_path} alt="" />
@@ -20,9 +20,7 @@ const MovieItem = ({ movie }) => {
             <div className="header">{movie.title}</div>
           </a>
           <div className="description">
-            <span maxlength="20">
-              <p>{movie.overview}</p>
-            </span>
+            <p>{movie.overview}</p>
           </div>
         </div>
       </div>
