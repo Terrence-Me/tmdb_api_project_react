@@ -9,7 +9,7 @@ This is a rendition of the TMDB website with minimal interactivity
 
 ## Homepage
 
-![Homepage](/tmdb_api_project_react/src/images/tmdb_react_1.gif)
+![Homepage](/tmdb_api_project_react/src/images/tmdb_react.gif)
 
 ## No Results
 
