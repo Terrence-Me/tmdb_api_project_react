@@ -11,17 +11,19 @@ import tmdb from '../apis/tmdb';
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [issearchResults, setIsSearchResults] = useState(false);
 
   useEffect(() => {
     const onInitialLoad = async () => {
       const response = await tmdb.get('/movie/popular');
       setMovies(response.data.results);
+      console.log(response.data.results);
       setIsInitialLoad(false);
     };
     if (isInitialLoad) {
       onInitialLoad();
     }
-  }, [isInitialLoad]);
+  });
 
   const onSearchSubmit = async (searchedMovie) => {
     const response = await tmdb.get('/search/movie', {
@@ -31,6 +33,7 @@ const App = () => {
     });
 
     setMovies(response.data.results);
+    setIsSearchResults(true);
     console.log(response.data.results);
   };
 
@@ -38,7 +41,7 @@ const App = () => {
     <div className="ui container">
       <Header />
       <SearchBar onSearchSubmit={onSearchSubmit} />
-      <MovieList movies={movies} />
+      <MovieList movies={movies} issearchResults={issearchResults} />
     </div>
   );
 };

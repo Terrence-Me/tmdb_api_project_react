@@ -14,6 +14,7 @@ const SearchBar = ({ onSearchSubmit }) => {
     event.preventDefault();
 
     onSearchSubmit(searchedMovie);
+    setSearchedMovie('');
   };
 
   return (
