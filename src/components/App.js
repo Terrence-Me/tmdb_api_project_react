@@ -17,7 +17,6 @@ const App = () => {
     const onInitialLoad = async () => {
       const response = await tmdb.get('/movie/popular');
       setMovies(response.data.results);
-      console.log(response.data.results);
       setIsInitialLoad(false);
     };
     if (isInitialLoad) {
@@ -34,7 +33,6 @@ const App = () => {
 
     setMovies(response.data.results);
     setIsSearchResults(true);
-    console.log(response.data.results);
   };
 
   return (
