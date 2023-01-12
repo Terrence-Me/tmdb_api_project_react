@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Input } from 'semantic-ui-react';
 
+import '../styles/styles.css';
+
 const SearchBar = ({ onSearchSubmit }) => {
   const [searchedMovie, setSearchedMovie] = useState('');
 

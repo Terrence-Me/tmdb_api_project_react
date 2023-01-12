@@ -4,6 +4,8 @@ import SearchBar from './SearchBar';
 import MovieList from './MovieList';
 import Header from './Header';
 
+import '../styles/styles.css';
+
 import tmdb from '../apis/tmdb';
 
 const App = () => {

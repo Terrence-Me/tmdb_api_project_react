@@ -1,4 +1,7 @@
 import React from 'react';
+
+import '../styles/styles.css';
+
 import logo from '../images/TMDB.png';
 
 const Header = () => {

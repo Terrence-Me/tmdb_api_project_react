@@ -1,6 +1,8 @@
 import React from 'react';
 import { Progress, Segment } from 'semantic-ui-react';
 
+import '../styles/styles.css';
+
 const PercentBar = ({ rating }) => {
   let averageRating = rating * 10;
 

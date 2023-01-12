@@ -70,6 +70,7 @@ a {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+  height: 38px;
 }
 
 #pregress-container {
