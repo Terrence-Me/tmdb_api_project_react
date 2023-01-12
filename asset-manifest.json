@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tmdb_api_project-react/static/css/main.d3b3f9e5.css",
+    "main.js": "/tmdb_api_project-react/static/js/main.be1fdf90.js",
+    "index.html": "/tmdb_api_project-react/index.html",
+    "main.d3b3f9e5.css.map": "/tmdb_api_project-react/static/css/main.d3b3f9e5.css.map",
+    "main.be1fdf90.js.map": "/tmdb_api_project-react/static/js/main.be1fdf90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3b3f9e5.css",
+    "static/js/main.be1fdf90.js"
+  ]
+}
