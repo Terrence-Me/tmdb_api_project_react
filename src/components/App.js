@@ -17,7 +17,6 @@ const App = () => {
 
   useEffect(() => {
     const onInitialLoad = async () => {
-      // setIsLoading(true);
       const response = await tmdb.get('/movie/popular');
       setMovies(response.data.results);
       setIsInitialLoad(false);

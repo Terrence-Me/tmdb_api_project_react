@@ -7,13 +7,14 @@ import '../styles/styles.css';
 
 const MovieList = ({ movies, issearchResults, isLoading }) => {
   console.log(movies);
-  let renderedMovieList = movies.length ? (
-    movies.map((movie) => {
-      return <MovieItem key={movie.id} movie={movie} />;
-    })
-  ) : (
-    <NoSearchResults />
-  );
+  let renderedMovieList =
+    movies.length > 0 ? (
+      movies.map((movie) => {
+        return <MovieItem key={movie.id} movie={movie} />;
+      })
+    ) : (
+      <NoSearchResults />
+    );
 
   return (
     <div className="ui">
