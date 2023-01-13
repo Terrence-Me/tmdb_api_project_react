@@ -5,16 +5,20 @@ import NoSearchResults from './NoSearchResults';
 
 import '../styles/styles.css';
 
-const MovieList = ({ movies, issearchResults }) => {
-  const renderedMovieList = movies.map((movie) => {
-    return <MovieItem key={movie.id} movie={movie} />;
-  });
-  // console.log(isInitialLoad);
+const MovieList = ({ movies, issearchResults, isLoading }) => {
+  console.log(movies);
+  let renderedMovieList = movies.length ? (
+    movies.map((movie) => {
+      return <MovieItem key={movie.id} movie={movie} />;
+    })
+  ) : (
+    <NoSearchResults />
+  );
 
   return (
     <div className="ui">
-      {!issearchResults ? <h2>What's Popular</h2> : <h2>Search Results</h2>}
-      {movies.length > 0 ? <div>{renderedMovieList}</div> : <NoSearchResults />}
+      {issearchResults ? <h2>Search Results</h2> : <h2>What's Popular</h2>}
+      {!isLoading && renderedMovieList}
     </div>
   );
 };
